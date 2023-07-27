@@ -21,13 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_26_023519) do
     t.string "name"
     t.time "time"
     t.text "comment"
-<<<<<<< HEAD
     t.integer "teacher_id"
     t.integer "category_id"
-=======
-    t.integer "teacher_id", null: false
-    t.integer "category_id", null: false
->>>>>>> 8188f12f775dad8f9da810427d43141528d24324
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_lessons_on_category_id"
@@ -56,6 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_26_023519) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "furigana"
+    t.boolean "attend", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -3,7 +3,8 @@ class ApplicationController < ActionController::API
     users = User.select(
       'id',
       'name',
-      'furigana'
+      'furigana',
+      'attend',
     )
 
     lessons = Lesson.joins(:teacher).select(

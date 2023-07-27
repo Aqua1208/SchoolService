@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
   get "api" => "application#api"
-=======
-  get "users/api" => "users#api"
->>>>>>> 8188f12f775dad8f9da810427d43141528d24324
+
+  patch 'users/attendall' => 'users#update_all_attend' # 全てのユーザーを出席状態に更新するためのルート
+  patch 'users/absentall' => 'users#update_all_absent'
+
+  patch "users/:id" => "users#update_attend"
 end
