@@ -21,8 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_26_023519) do
     t.string "name"
     t.time "time"
     t.text "comment"
-    t.integer "teacher_id", null: false
-    t.integer "category_id", null: false
+    t.integer "teacher_id"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_lessons_on_category_id"

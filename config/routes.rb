@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get "users/api" => "users#api"
+  get "api" => "application#api"
 end
